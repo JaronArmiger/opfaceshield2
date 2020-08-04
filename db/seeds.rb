@@ -1,27 +1,27 @@
 # users
-admin_user = User.new(email: "test@test.com",
+admin_user = User.new(email: "jaron.armiger@gmail.com",
 			    password: "password",
 			    password_confirmation: "password",
 			    admin: true)
-#admin_user.confirm
+admin_user.confirm
 admin_user.save!
 
-user_two = User.new(email: "hombre@masculinida",
+user_two = User.new(email: "armiger2@uic.edu",
 					password: "password",
 					password_confirmation: "password")
-#user_two.confirm
+user_two.confirm
 user_two.save
 
-user_three = User.new(email: "loic@pri.gent",
+user_three = User.new(email: "jointpainjames@gmail.com",
 					password: "password",
 					password_confirmation: "password")
-#user_three.confirm
+user_three.confirm
 user_three.save
 
 no_account_user = User.new(email: "no_account@chasseur.fr",
 						   password: "password",
 						   password_confirmation: "password")
-#no_account_user.confirm
+no_account_user.confirm
 no_account_user.save
 
 # accounts
