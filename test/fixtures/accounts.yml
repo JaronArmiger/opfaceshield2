@@ -1,0 +1,18 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+# alfonso's account
+one:
+  institution_name: Rush
+  institution_type: Medical
+  contact_first_name: Luciana
+  contact_last_name: Gonzalez
+  phone_number: 2245437877
+  user: alfonso
+
+two:
+  institution_name: Peramonton
+  institution_type: Medical
+  contact_first_name: Annette
+  contact_last_name: Markham
+  phone_number: 5558980011
+  user: ozuna

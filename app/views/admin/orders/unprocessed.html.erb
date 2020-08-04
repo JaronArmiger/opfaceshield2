@@ -1,0 +1,11 @@
+
+<div class="main-wrapper">
+	<div class="processed-header-wrapper">
+	  <%= link_to admin_orders_path, class: "back-link" do %>
+  	    <span class="material-icons">first_page</span>
+  	    <p>back</p>
+  	  <% end %>
+  	  <h1 class="order-header">Unprocessed</h1>
+  	</div>
+    <%= render @unprocessed %>
+</div>

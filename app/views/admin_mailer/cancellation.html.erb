@@ -1,0 +1,62 @@
+<style>
+	* {
+		font-family: helvetica, sans-serif;
+		color: #333;
+	}
+
+	a {
+		text-decoration: none;
+		font-weight: 700;
+		color: white;
+		display: block;
+		background-color: rgba(163, 70, 184, 0.8);
+		width: 100px;
+		padding: 10px 10px;
+		text-align: center;
+		border-radius: 10px;
+		margin: 10px auto;
+	}
+	
+	span {
+		font-weight: 700;
+	}
+	
+	ul {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+	}
+
+	div {
+		border-top: 1px solid #CCC;
+		padding-top: 10px;
+		border-bottom: 1px solid #CCC;
+		padding-bottom: 10px;
+		margin: 10px 0;
+	}
+</style>
+<p>
+	An order has been canceled :(
+</p>
+<p>
+	<span>User Email:</span> <%= @user.email %>
+</p>
+
+<div class="order-info">
+	<h2>Order Info</h2>
+	<ul>
+		<li><span>Recipient: </span><%= @account.institution_name %></li>
+		<li><span>Face Shields: </span><%= @order.num_shields %></li>
+		<li><span>Mask Adjusters: </span><%= @order.num_adjusters %></li>
+	</ul>
+</div>
+<div class="address-info">
+	<h2>Shipping Address</h2>
+	<ul>
+		<li><span>Street Address: </span><%= @order.street_address %></li>
+		<li><span>City: </span><%= @order.city %></li>
+		<li><span>State: </span><%= @order.state %></li>
+		<li><span>Zip Code: </span><%= @order.zipcode %></li>
+	</ul>
+</div>
+

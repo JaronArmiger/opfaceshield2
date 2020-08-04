@@ -1,0 +1,95 @@
+.form-wrapper {
+	max-width: 30rem;
+	margin: auto;
+}
+
+.share-button {
+  flex-basis: 40%;
+}
+
+// photo upload
+input[type="file"] {
+	width: 0.1px;
+	height: 0.1px;
+	opacity: 0;
+	overflow: hidden;
+	position: absolute;
+	z-index: -1;
+}
+
+.upload-div {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-around;
+}
+
+.upload-photo {
+	font-weight: bold;
+	margin-bottom: .5rem;
+	font-size: 1rem;
+
+}
+
+.file-label {
+
+	//background-image: linear-gradient(to bottom right, #0025b8, #798ddb);
+    width: 3rem;
+    height: 3rem;
+    display: inline-block;
+	font-size: 3rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	border-radius: 50%;
+	background-color: $main-color;
+	
+	span {
+	  color: white;
+	  font-size: 2rem;
+	  padding: .5rem;
+	}
+}
+
+
+
+// text input
+
+.text-input-div {
+	position: relative;
+}
+
+::placeholder {
+	color: $dark-blue!important;
+}
+
+.text-input {
+	border: 1px solid $gray-200;
+	color: $dark-blue!important;
+	min-height: 10rem;
+	background-color: rgba(255,255,255,0);
+	font-size: 17px;
+	font-weight: 700;
+	&:focus {
+	  outline: none;
+	  background-color: rgba(255,255,255,0);
+	  border: 0;
+    }
+}
+
+
+#x-button {
+	width: 2.5rem;
+	height: 2.5rem;
+	background-size: cover;
+	position: absolute;
+	top: .7rem;
+	right: 1rem;
+	border: 0;
+	background-color: rgba(0,0,0,0);
+	display: none;
+	&:hover {
+		cursor:pointer;
+	}
+}

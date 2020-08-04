@@ -1,0 +1,69 @@
+.list-group-item {
+	border-left: 0;
+	border-right: 0;
+	border-bottom: 2px solid $main-color;
+}
+
+.account-info span {
+	font-weight: 700;
+}
+
+.info-group {
+	display: flex;
+	justify-content: space-between;
+}
+
+.info {
+	display: flex;
+	flex-direction: column;
+	flex-basis: 90%;
+}
+
+.addresses-li {
+	padding: 0;
+	h2 {
+		margin-left: 1rem;
+	}
+}
+
+.buttons {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+	justify-content: space-between;
+}
+
+.buttons a {
+	text-align: right;
+	&:hover {
+		text-decoration: none;
+	}
+}
+
+.buttons i {
+  color: $secondary-color;
+  font-size: 1.5rem;
+}
+
+.account-info .no-bold {
+	font-weight: 400;
+	color: $dark-blue;
+}
+
+.suggestion {
+	font-size: .7rem;
+}
+
+#add-address {
+	margin: 1rem;
+}
+
+#add-address a {
+  color: $dat-grey;
+  display: flex;
+}
+
+#add-address span {
+	margin-left: .5rem;
+}
+

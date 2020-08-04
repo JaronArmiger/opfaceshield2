@@ -1,0 +1,54 @@
+.navbar {
+  position: fixed;
+  right: 0;
+  left: 0;
+  z-index: 1030;
+  transition: all .5s ease;
+  background-color: white;
+  //box-shadow: 0 3px 5px rgba(0,0,0,0.2);
+}
+
+.navbar-brand img {
+	height: 3rem;
+}
+
+.navbar-toggler {
+	color: $secondary-color!important;
+}
+
+.navbar-nav .nav-item .nav-link {
+	//font-weight: 700;
+	color: $main-color;
+	margin: 0 .5rem;
+	//font-family: 'Work Sans', sans-serif;
+}
+
+.reg-link {
+	display: none;
+}
+
+.navbar-toggler {
+	border: 0!important;
+}
+
+@include media-breakpoint-up(md) {
+	.navbar-collapse {
+		justify-content: flex-end;
+	}
+
+	.reg-link {
+	  display: inline-block; 
+	}
+
+	.navbar-brand {
+		margin-left: 4rem;
+	}
+
+	.navbar-brand img {
+		height: 4rem;
+	}
+
+	.navbar-nav {
+		margin-right: 4rem;
+	}
+}

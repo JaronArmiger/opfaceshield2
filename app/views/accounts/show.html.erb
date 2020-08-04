@@ -1,0 +1,76 @@
+<div class="main-wrapper">
+<div class="card account-info">
+	<h1 class="card-header">Account</h1>
+	<ul class="list-group">
+		<li class="list-group-item info-group">
+			<div class="info">
+			  <h2>Login</h2>
+			  <span>Email:</span>
+			  <%= @account.user.email %>
+			  <span class="no-bold suggestion">(click pencil icon to change password)</span>
+			</div>
+			<div class="buttons">
+			  <%= link_to edit_user_registration_path(current_user) do %>
+				<i class="material-icons">edit</i>
+			  <% end %>
+			  <%= link_to user_registration_path, data: { confirm: "Are you sure?" }, method: :delete do %>
+				Cancel My Account
+			  <% end %>
+			</div>
+		</li>
+		<li class="list-group-item info-group">
+			<div class="info">
+				<h2>Institution</h2>
+				<span>Name:</span>
+				<%= @account.institution_name %>
+				<span>Type:</span>
+				<%= @account.institution_type %>
+				<h2>Contact</h2>
+			    <span>Name:</span>
+			    <%= @account.contact_first_name %>
+			    <%= @account.contact_last_name %>
+			    <span>Phone:</span>
+			    <%= @account.phone_number %>
+			</div>
+			<div class="buttons">
+			  <%= link_to edit_account_path(@account) do %>
+				<i class="material-icons">edit</i>
+			  <% end %>
+			</div>
+		</li>
+		<li class="list-group-item addresses-li">
+			<h2><%= pluralize_address(@account.addresses.count, "Address") %></h2>
+			<ul class="list-group">
+				<% @account.addresses.each do |address| %>
+				  <li class="list-group-item info-group address-info">
+				  	<div class="info">
+				  	  <span>Street Address:</span>
+				      <%= address.street_address %>
+				      <span>City:</span>
+				      <%= address.city %>
+				      <span>State:</span>
+				      <%= address.state %>
+				      <span>Zip Code:</span>
+				      <%= address.zipcode %>
+				    </div>
+				    <div class="buttons">
+					  <%= link_to edit_address_path(address) do %>
+				        <i class="material-icons">edit</i>
+				      <% end %>
+				      <%= link_to address_path(address), data: { confirm: "Are you sure want to delete this address?" },method: :delete do %>
+				        <i class="material-icons">delete_outline</i>
+				      <% end %>
+				    </div>
+				  </li>
+				<% end %>
+				<div class="buttons" id="add-address">
+				  <%= link_to new_address_path do %>
+				    <i class="material-icons">add_circle_outline</i>
+			        <span class="no-bold"> Add A New Address</span>
+			      <% end %>
+			    </div>
+			</ul>
+		</li>
+	</ul>
+</div>
+</div>

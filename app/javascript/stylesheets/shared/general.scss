@@ -1,0 +1,300 @@
+$main-color: rgb(131,208,245);
+$main-transparent: rgba(131,208,245,0.45);
+$secondary-color: rgb(227,6,19);
+$dark-blue: #003482;
+$dat-grey: rgba(0,0,0,0.7);
+$border: 2px solid $dat-grey;
+$border-radius: .7rem;
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	color: $dark-blue;
+	background-color: $main-transparent;
+}
+
+
+form label {
+	font-weight: 700;
+	color: $dark-blue;
+}
+
+h1,h2,h3,h4,h5 {
+  //font-family: 'Volkhov', serif;
+  //font-weight: 700;
+  color: $secondary-color;
+}
+
+a {
+  color: $dark-blue;
+}
+
+.container {
+	padding: 0 .3rem;
+	box-sizing: border-box;
+	max-width: 1000px;
+}
+
+.main-wrapper {
+	display: flex;
+	flex-direction: column;
+	align-items: stretch;
+	max-width: 35rem;
+	margin: auto;
+}
+
+.desktop-links {
+  transform: rotateX(90deg);
+  max-height: 0;
+}
+
+.dark-blue {
+	color: $dark-blue!important;
+}
+
+.red {
+	color: $secondary-color!important;
+	&:hover {
+		color: #91030b;
+	}
+}
+
+.page-title {
+	text-align: center;
+}
+
+.row {
+	margin: 0;
+}
+
+.card {
+	margin: .5rem 0;
+	border: 0;
+}
+
+.card .card-header {
+	color: white;
+	background-color: $main-color;
+	border: 0;
+}
+
+.list-group-item {
+	margin: .5rem;
+}
+
+.alert {
+	max-width: 35rem;
+	margin: auto;
+	margin-bottom: 1rem;
+	text-align: center;
+	font-weight: 700;
+	border:0;
+	//font-family: 'Work Sans', sans-serif;
+}
+
+.alert a {
+	color: $dark-blue;
+	&:hover {
+		text-decoration: none;
+	}
+}
+
+.alert-success {
+	background-color: $main-transparent;
+	color: $dark-blue;
+}
+
+.alert-alert {
+	background-color: rgba(255, 225, 0, 0.8);
+	color: #7a7128;
+}
+
+.alert-notice {
+	background-color: rgba(252, 123, 3, 0.5);
+	color: #8f4806;
+}
+
+#error_explanation {
+	background-color: rgba(196, 10, 10, 0.4);
+	border-radius: $border-radius;
+	padding: .7rem;
+	color: #7a0a17;
+}
+
+.dummy {
+	height: 4rem;
+}
+
+.hide {
+	display: none;
+}
+
+.google {
+	display: flex;
+}
+
+.google-svg {
+	margin-right: .5rem;
+}
+
+input[type="submit"] {
+	border: 0;
+	color: white;
+	background-color: $secondary-color;
+	font-size: 1.2rem;
+	padding: .5rem 1.5rem;
+	border-radius: $border-radius;
+	font-weight: 700;
+}
+
+// devise forms
+.devise-header {
+	width: 100%;
+	text-align: center;
+}
+
+.devise-form {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-bottom: 1rem;
+}
+
+.devise-form label {
+	font-weight: 700;
+	font-size: 1.2rem;
+	color: $dark-blue;
+	margin-top: 1rem;
+}
+
+.devise-form .field {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	//margin-bottom: 1.2rem;
+}
+
+.devise-form .actions {
+	display: flex;
+	justify-content: center;
+	align-self: center;
+	margin-top: 1rem;
+}
+
+.field input {
+	padding: .5rem 1.5rem;
+	font-size: 1.2rem;
+	border: $border;
+	border-color: $dark-blue;
+	border-radius: $border-radius;
+	color: $dark-blue;
+	&:focus {
+		outline: none;
+		background-color: rgba(0,0,0,0);
+	}
+}
+
+.cancel {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-bottom: 2rem;
+}
+
+.links {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+	//margin: 1rem;
+}
+
+.links a {
+	margin-top: .5rem;
+	font-weight: 700;
+	color: $main-color;
+}
+
+.google {
+	color: white;
+	background-color: $main-color;
+}
+
+#remember-me {
+  flex-direction: row;
+  align-items: center;
+}
+
+#remember-me > * {
+	margin-right: 1rem;
+}
+
+
+#remember-me input {
+
+}
+
+//reg forms 
+
+.form-group input[type=submit] {
+	border: 0;
+	margin-top: 2rem;
+}
+
+#error_explanation {
+	text-align:center;
+}
+
+#error_explanation ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	text-align: center;
+}
+
+#error_explanation h2 {
+	font-size: 1.1rem;
+}
+
+.little-p {
+	font-size: .8rem;
+	margin-top: .3rem;
+}
+
+.footer {
+	display: none
+}
+
+@include media-breakpoint-up(md) {
+	.dummy {
+		height: 7rem;
+	}
+
+	.footer {
+		display: block;
+		height: 4rem;
+		border: 2px solid $dark-blue;
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		right: 0;
+	}
+	.mobile-links {
+		transform: rotateX(90deg);
+		max-height: 0;
+	}
+}
+
+
+
+@include media-breakpoint-up(xl) {
+	
+
+	.desktop-links {
+		transform: rotateX(0);
+		max-height: 50rem;
+	}
+}

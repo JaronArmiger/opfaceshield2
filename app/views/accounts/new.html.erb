@@ -1,0 +1,60 @@
+<div class="main-wrapper">
+<h1 class="page-title">Account Information</h1>
+
+<%= form_with(model: @account, local: true) do |f| %>
+  <%= render 'shared/error_messages', object: f.object %>
+  <div class="institution">
+  	  <h2>Institution</h2>
+	  <div class="form-group">
+	    <%= f.label :institution_name, "Institution Name" %>
+	    <%= f.text_field :institution_name, class: "form-control" %>
+	  </div>
+	  <div class="form-group">
+	    <%= f.label :institution_type, "Institution Type" %>
+	    <%= f.select :institution_type, options_for_select(institution_types), {}, class: "form-control" %>
+	  </div>
+	  <div id="other-div" style="display: none">
+	  	<%= f.label :other_type, "Please specify:" %>
+	  	<%= f.text_field :other_type %>
+	  </div>
+  </div>
+	  <div class="contact">
+	  	<h2>Primary Contact</h2>
+	  	<div class="form-group">
+	    <%= f.label :contact_first_name, "First Name" %>
+	    <%= f.text_field :contact_first_name, class: "form-control" %>
+	  </div>
+	    <%= f.label :contact_last_name, "Last Name" %>
+	    <%= f.text_field :contact_last_name, class: "form-control" %>
+	  <div class="form-group">
+	    <%= f.label :phone_number, "Phone Number" %>
+	    <%= f.telephone_field :phone_number, class: "form-control" %>
+	  </div>
+  </div>
+  <div class="address">
+  	<h2>Address</h2>
+  	<span>You can associate more addresses with this account later if you'd like.</span>
+  	<%= f.fields_for :addresses do |addresses_form| %>
+  	  <div class="form-group">
+  	    <%= addresses_form.label :street_address, "Street Address" %>
+  	    <%= addresses_form.text_field :street_address, class: "form-control" %>
+  	 </div>
+  	 <div class="form-group">
+  	    <%= addresses_form.label :city %>
+  	    <%= addresses_form.text_field :city, class: "form-control" %>
+  	 </div>
+  	 <div class="form-group">
+  	    <%= addresses_form.label :state %>
+  	    <%= addresses_form.select :state, options_for_select(us_states, "IL"), {}, class: "form-control" %>
+  	 </div>
+  	 <div class="form-group">
+  	    <%= addresses_form.label :zipcode %>
+  	    <%= addresses_form.text_field :zipcode, class: "form-control" %>
+  	 </div>
+  	<% end %>
+  </div>
+  <div class="form-group d-flex justify-content-center">
+    <%= f.submit "Save", class: "btn btn-secondary" %>
+  </div>
+<% end %>
+</div>

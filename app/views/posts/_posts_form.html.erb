@@ -1,0 +1,16 @@
+<div class="form-wrapper">
+  <%= form_with(model: @post, local: true, class: "post-form") do |f| %>
+	<%= render 'shared/error_messages', object: f.object %>
+	<div class="form-group text-input-div">
+	  <%= f.text_area :content, placeholder: "I love Operation Face Shield because...", class: "form-control text-input" %>
+	  <span class="material-icons"id="x-button">clear</span>
+	</div>
+	<div class="form-group">
+	    <div class="upload-div">
+		  <label for="post_image" class="file-label"><span class="material-icons">add_a_photo</span></label>
+			<%= f.file_field :image, accept: "image/jpeg, image/gif, image/png", class: "img-upload", id: "post_image" %>
+		  <%= f.submit yield(:submit), class: "share-button" %>
+		</div>
+	</div>
+  <% end %>
+</div>

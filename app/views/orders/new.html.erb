@@ -1,0 +1,70 @@
+<div class="main-wrapper">
+<h1 class="page-title">Place Order</h1>
+<%= form_with(model: @order, local: true) do |f| %>
+  <%= render 'shared/error_messages', object: f.object %>
+  <div class="form-group">
+  	<figure class="d-flex flex-column align-items-center">
+	  	<img src="https://lh5.googleusercontent.com/sCABL8Qrsdp8OZHRInK8C-66UJg3FzJb7XMta0JgPjuHAyMPsofPo3mMCNlmwcIsRhyO3MLXNk5-rBdRcxd9haPrAlew3DcaPjeQAuiIk1SV9nxd_Sul98Vmqc0F=w200" alt="face shield" class="img-fluid">
+		<figcaption class="figure-caption">example face shield</figcaption>
+	</figure>
+	<%= f.label :num_shields, "Number of Face Shields" %>
+  	<%= f.number_field :num_shields, class: "form-control" %>
+  </div>
+  <div class="form-group">
+  	<figure class="d-flex flex-column align-items-center">
+	  	<img src="https://lh5.googleusercontent.com/-iyjgAQ2eMbh8kIEh-Wy3OkGITqVMgjSeTu7JPcyg-pbxRy02zB9ZwNLsMfzOb47NuZ9dZ_UErjX0BrWdhCtltobpor0jhcvGIsaYr-Z7_etv7wHytaTCtOtRWKl=w600" alt="mask adjuster" alt="face shield" class="img-fluid">
+		<figcaption class="figure-caption">example mask adjuster</figcaption>
+	</figure>
+	<%= f.label :num_adjusters, "Number of Mask Adjusters" %>
+  	<%= f.number_field :num_adjusters, class: "form-control" %>
+  </div>
+  <div class="form-group">
+  	<span>Why are you requesting this equipment? (limit 140 characters)</span>
+  	<%= f.text_area :message, class: "form-control" %>
+  	<p class="little-p"><span id="char-counter">140</span> characters remaining</p>
+  </div>
+  	<% if !current_user_account.addresses.empty? %>
+  	<div class="form-group">
+  	  <span>Select An Address</span>
+  	  <br>
+  	  <ul class="list-group address-group">
+  	    <% current_user_account.addresses.each do |address| %>
+		  <li class="list-group-item order-form-address">
+			<%= f.radio_button :address_id, address.id %>
+			<div class="info">
+				<p><span class="font-weight-bold">Street Address:</span> <%= address.street_address %></p>
+				<p><span class="font-weight-bold">City:</span> <%= address.city %></p>
+				<p><span class="font-weight-bold">State:</span > <%= address.state %></p>
+				<p><span class="font-weight-bold">Zip Code:</span> <%= address.zipcode %></p>
+			</div>
+		  </li>
+	  </ul>
+  	  <% end %>
+  	</div>
+  	<div class="form-group">
+	  <span id="new-address-btn" style="cursor: pointer" ><i class="material-icons">add_circle_outline</i> Or Enter A New Address</span>
+	</div>
+  	<% end %>
+  	<div id="new-address-div" class="showing" >
+	  	<div class="form-group">
+	      <%= f.label :street_address, "Street Address" %>
+	      <%= f.text_field :street_address, class: "form-control" %>
+	   </div>
+	   <div class="form-group">
+	      <%= f.label :city %>
+	      <%= f.text_field :city, class: "form-control" %>
+	   </div>
+	   <div class="form-group">
+	      <%= f.label :state %>
+	      <%= f.select :state, options_for_select(us_states, yield(:preselect_state)), {}, class: "form-control" %>
+	   </div>
+	   <div class="form-group">
+	      <%= f.label :zipcode %>
+	      <%= f.text_field :zipcode, class: "form-control" %>
+	   </div>
+   </div>
+  <div class="form-group d-flex justify-content-center">
+    <%= f.submit "Place Order" %>
+  </div>
+<% end %>
+</div>

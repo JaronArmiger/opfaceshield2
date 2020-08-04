@@ -1,0 +1,26 @@
+
+<%= @account.contact_first_name %>,
+
+Thanks for your order! Your equipment will reach you shortly.
+Keep fighting the good fight!
+
+Operation Face Shield Chicago
+
+Follow this URL to view your order:
+<%= order_url(@order) %>
+
+Order Info
+
+  Recipient: <%= @account.institution_name %>
+  Face Shields: <%= @order.num_shields %>
+  Mask Adjusters: <%= @order.num_adjusters %>
+
+
+
+Shipping Address
+
+  Street Address: <%= @order.street_address %>
+  City: <%= @order.city %>
+  State: <%= @order.state %>
+  Zip Code: <%= @order.zipcode %>
+

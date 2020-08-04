@@ -1,0 +1,68 @@
+<nav class="navbar navbar-expand-lg navbar-light">
+  <a class="navbar-brand" href="<%= root_path %>"><%= image_pack_tag 'media/images/banner3.png' %></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="material-icons">
+      more_vert
+    </span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav">
+      
+      <% if user_signed_in? && !current_user.admin?%>
+        <li class="nav-item">
+          <%= link_to 'About Us', about_path, class: "nav-link" %>
+        </li>
+        <li class="nav-item reg-link">
+          <%= link_to "Place Order", new_order_path, class: "nav-link dark-blue" %>
+        </li>
+        <li class="nav-item">
+            <%= link_to "Write Post", new_post_path, class: "nav-link reg-link" %>
+        </li>
+         <% if current_user_account %>
+           <% if current_user_account.orders.any? %>
+             <li class="nav-item reg-link">
+               <%= link_to "View Orders", orders_path, class: "nav-link" %>
+             </li>
+           <% end %>
+           <li class="nav-item">
+             <%= link_to "Account", account_path(current_user_account), class: "nav-link" %>
+           </li>
+         <% else %>
+           <li class="nav-item reg-link">
+             <%= link_to "Complete Account Set Up", new_account_path, class: "nav-link" %>
+           </li>
+           <li class="nav-item reg-link">
+             <%= link_to user_registration_path, data: { confirm: "Are you sure?" }, method: :delete, class: "nav-link" do %>
+               Cancel My Account
+             <% end %>
+           </li>
+         <% end %>
+         <li class="nav-item">
+           <%= link_to 'Sign Out', destroy_user_session_path, method: :delete, class: "nav-link red" %>
+         </li>
+      <% elsif user_signed_in? && current_user.admin? %>
+        <li class="nav-item admin-link">
+             <%= link_to "All Orders", admin_orders_path, class: "nav-link" %>
+        </li>
+        <li class="nav-item">
+            <%= link_to "Write Post", new_post_path, class: "nav-link" %>
+        </li>
+        <li class="nav-item">
+           <%= link_to 'Sign Out', destroy_user_session_path, method: :delete, class: "nav-link red" %>
+         </li>
+      <% else %>
+        <li class="nav-item">
+          <%= link_to 'About Us', about_path, class: "nav-link" %>
+        </li>
+        <li class="nav-item">
+         <%= link_to 'Log in', new_user_session_path, class: "nav-link" %>
+        </li>
+        
+        <li class="nav-item">
+         <%= link_to 'Sign Up', new_user_registration_path, class: "nav-link" %>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+</nav>

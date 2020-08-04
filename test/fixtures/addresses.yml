@@ -1,0 +1,17 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+# belongs to Alfonso's account
+one:
+  street_address: 1400 Pennsylvania Ave
+  city: Washington
+  state: DC
+  zipcode: 20500
+  account: one
+
+# belongs to Ozuna's account
+two:
+  street_address: 700 N Plimpton Dr
+  city: Streamlow
+  state: Puffington
+  zipcode: 89898
+  account: two

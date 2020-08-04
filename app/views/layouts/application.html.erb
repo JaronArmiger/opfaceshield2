@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <%= render 'layouts/head' %>
+
+  <body>
+    <%= render 'layouts/header' %>
+    <div class="container">
+        <div class="dummy"></div>
+        <%= render 'shared/links' unless current_user && !current_user.admin?%>
+        <% if !flash.empty? %>
+          <% flash.each do |msg_type, msg| %>
+            <%= content_tag(:div, msg, class: "alert alert-#{msg_type}") %>
+          <% end %>
+        <% end %>
+        <%= yield %>
+        <div class="dummy bottom"></div>
+    </div>
+    <% if current_user && current_user.admin? %>
+      <%= render 'layouts/admin_icon_bar' %>
+    <% else %>
+      <% if current_user && current_user_account %>
+        <%= render 'layouts/icon_bar' %>
+      <% end %>
+    <% end %>
+    <%= render 'layouts/footer' %>
+  </body>
+</html>
