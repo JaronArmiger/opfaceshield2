@@ -37,7 +37,7 @@ class OrdersController < ApplicationController
 	  if @order.save
 	  	flash[:success] = "Order placed!"
 	  	redirect_to order_path(@order)
-	  	#OrderMailer.confirmation(current_user, @order).deliver_now
+	  	OrderMailer.confirmation(current_user, @order).deliver_now
 	  else
 	  	render :new
 	  end
@@ -46,8 +46,8 @@ class OrdersController < ApplicationController
 	def destroy
 	  flash[:success] = "Order canceled!"
 	  
-	  #OrderMailer.cancellation(current_user, @order).deliver_now
-	  #AdminMailer.cancellation(current_user, @order).deliver_now
+	  OrderMailer.cancellation(current_user, @order).deliver_now
+	  AdminMailer.cancellation(current_user, @order).deliver_now
 	  @order.destroy
 	  redirect_to root_path
 	end
