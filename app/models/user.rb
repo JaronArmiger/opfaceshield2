@@ -2,7 +2,7 @@ class User < ApplicationRecord
   has_one :account, dependent: :destroy
   has_many :posts, dependent: :delete_all
 
-  devise :database_authenticatable, :registerable,
+  devise :database_authenticatable, :registerable, :confirmable,
          :recoverable, :rememberable, :validatable,
          :omniauthable, omniauth_providers: [:google_oauth2]
 
