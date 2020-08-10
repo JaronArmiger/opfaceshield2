@@ -22,4 +22,8 @@ module ApplicationHelper
 	def administrator
 	  @administrator ||= User.find_by(admin: true)
 	end
+
+	def cookie_redirect
+	  redirect_to(cookies[:redirect]) || root_path
+	end
 end

@@ -16,6 +16,7 @@ import '../scripts/accounts_form.js'
 import '../scripts/orders_form.js'
 import '../scripts/admin_orders.js'
 import '../scripts/posts_form.js'
+import '../scripts/donate'
 //import '../scripts/navbar.js'
 
 
