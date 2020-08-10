@@ -20,8 +20,8 @@ default: &default
   # For details on connection pooling, see Rails configuration guide
   # https://guides.rubyonrails.org/configuring.html#database-pooling
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-  username: opfaceshield
-  password: <%= ENV['OPFACESHIELD_DATABASE_PASSWORD'] %>
+  username: opfaceshield2
+  password: <%= ENV['OPFACESHIELD2_DATABASE_PASSWORD'] %>
 
 development:
   <<: *default
@@ -82,6 +82,6 @@ test:
 #
 production:
   <<: *default
-  database: opfaceshield_production
-  username: opfaceshield
-  password: <%= ENV['OPFACESHIELD_DATABASE_PASSWORD'] %>
+  database: opfaceshield2_production
+  username: opfaceshield2
+  password: <%= ENV['OPFACESHIELD2_DATABASE_PASSWORD'] %>
