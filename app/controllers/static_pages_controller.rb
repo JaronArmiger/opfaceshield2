@@ -6,4 +6,11 @@ class StaticPagesController < ApplicationController
 
   def about
   end
+
+  def paypal_cancel
+    
+  end
+
+  def paypal_completed
+  end
 end
