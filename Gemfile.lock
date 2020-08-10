@@ -42,11 +42,6 @@ GEM
     activejob (6.0.3.2)
       activesupport (= 6.0.3.2)
       globalid (>= 0.3.6)
-    activemerchant (1.111.0)
-      activesupport (>= 4.2)
-      builder (>= 2.1.2, < 4.0.0)
-      i18n (>= 0.6.9)
-      nokogiri (~> 1.4)
     activemodel (6.0.3.2)
       activesupport (= 6.0.3.2)
     activerecord (6.0.3.2)
@@ -167,6 +162,9 @@ GEM
       oauth2 (~> 1.1)
       omniauth (~> 1.9)
     orm_adapter (0.5.0)
+    paypal-sdk-rest (1.7.4)
+      multi_json (~> 1.0)
+      xml-simple
     pg (1.2.3)
     public_suffix (4.0.5)
     puma (4.3.5)
@@ -266,6 +264,7 @@ GEM
     websocket-driver (0.7.2)
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.5)
+    xml-simple (1.1.5)
     xpath (3.2.0)
       nokogiri (~> 1.8)
     zeitwerk (2.3.1)
@@ -275,7 +274,6 @@ PLATFORMS
 
 DEPENDENCIES
   active_storage_validations (~> 0.8.9)
-  activemerchant (~> 1.111)
   aws-sdk-s3 (~> 1.74)
   bootsnap (>= 1.4.2)
   byebug
@@ -288,6 +286,7 @@ DEPENDENCIES
   minitest (~> 5.14, >= 5.14.1)
   minitest-reporters (~> 1.4, >= 1.4.2)
   omniauth-google-oauth2 (~> 0.8.0)
+  paypal-sdk-rest (~> 1.7, >= 1.7.4)
   pg (>= 0.18, < 2.0)
   puma (~> 4.1)
   rails (~> 6.0.3, >= 6.0.3.2)
