@@ -1,0 +1,24 @@
+
+
+<div class="post">
+  <%= link_to article.url do %>
+  	<%= image_tag article.img_src %>
+    <h2><%= article.title %></h2>
+  <% end %>
+  <%# image_tag post.image, class: "card-img" if post.image.attached? %>
+  <div class="post-content">
+  	<span class="post-user"><%= @account.institution_name if @account %></span>
+  	<p><%# post.content %></p>
+  </div>
+  <%# if current_user && (belongs_to_me?(post,current_user) || current_user.admin?) %>
+    <div class="dropdown">
+	  <button class="post-options" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+	    <span class="material-icons">more_horiz</span>
+	  </button>
+	  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+	    <%# link_to "edit post", edit_post_path(post), class: "dropdown-item" %>
+	    <%# link_to "delete post", post_path(post), method: :delete, class: "dropdown-item" %>
+	  </div>
+	</div>
+  <%# end %>
+</div>
