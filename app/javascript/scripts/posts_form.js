@@ -1,5 +1,5 @@
 $(document).on('turbolinks:load', function() {
-  const textarea = document.querySelector('textarea');
+  const textarea = document.querySelector('#post_content');
   if (textarea) {
 	textarea.addEventListener('focus', changeHeight);
 	textarea.addEventListener('input', changeHeight);

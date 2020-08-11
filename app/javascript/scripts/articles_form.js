@@ -1,6 +1,15 @@
 import noImage from '../images/no_image.png';
 
-const setTitle = (url, element) => {
+$(document).on('turbolinks:load', function() {
+  const $urlInput = $('#article_url');
+  const $titleInput = $('#article_title');
+  const $imgInput = $('#article_img_src');
+  const $previewDiv = $('.articlePreview');
+  const $previewImage = $('#previewImage');
+  const $previewTitle = $('#previewTitle');
+
+
+  const setTitle = (url) => {
   const proxyurl = "https://cors-anywhere.herokuapp.com/";
   fetch(proxyurl + url)
     .then(response => response.text())
@@ -9,29 +18,14 @@ const setTitle = (url, element) => {
       let title = regex.exec(contents)[0];
       title = title.replace(/<title>/,"");
       title = title.replace(/<\/title>/,"");
-      element.text(title);
-
+      $previewTitle.text(title);
+      $titleInput.val(title);
     })
     .catch(function (err) {
-      element.text("title not found at given URL");
+      $previewTitle.text("title not found at given URL");
       console.log("Something went wrong!", err);
     });
-}
-
-const addHiddenInput = () => {
-  
-}
-
-const addInput = () => {
-  
-}
-
-$(document).on('turbolinks:load', function() {
-  const $urlInput = $('#article_url');
-  const $imgInput = $('#article_img_src');
-  const $previewDiv = $('.articlePreview');
-  const $previewImage = $('#previewImage');
-  const $previewTitle = $('#previewTitle');
+  }
 
   $previewImage.on('error', function(e) {
     this.src = noImage;
@@ -39,8 +33,13 @@ $(document).on('turbolinks:load', function() {
   });
 
   $urlInput.on('input', function(e) {
-    setTitle(e.target.value, $previewTitle);
+    setTitle(e.target.value);
   });
+
+  $titleInput.on('input', function(e) {
+  	console.log(this);
+  	$previewTitle.text(this.value);
+  })
 
   $imgInput.on('input', function(e) {
   	$previewImage.attr('src', e.target.value);
