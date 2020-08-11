@@ -22,7 +22,7 @@ $(document).on('turbolinks:load', function() {
       $titleInput.val(title);
     })
     .catch(function (err) {
-      $previewTitle.text("title not found at given URL");
+      $previewTitle.text("invalid URL");
       console.log("Something went wrong!", err);
     });
   }

@@ -1,11 +1,6 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  url: MyString
-  title: MyString
-  img_src: MyString
-
-two:
-  url: MyString
-  title: MyString
-  img_src: MyString
+  url: https://www.mlive.com/news/ann-arbor/2020/04/ann-arbor-pilot-flies-face-shields-to-health-care-workers-around-midwest-to-help-fight-coronavirus.html
+  title: Ann Arbor pilot flies face shields to health care workers around Midwest to help fight coronavirus - mlive.com
+  img_src: https://www.mlive.com/resizer/pi5sJoct9HKX6S83xYFHWAF1saI=/700x0/smart/cloudfront-us-east-1.images.arcpublishing.com/advancelocal/4VENGY2KRBBKRKAEXBCLQNF3IQ.JPG
