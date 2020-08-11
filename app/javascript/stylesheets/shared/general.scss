@@ -15,6 +15,9 @@ body {
 	background-color: $main-transparent;
 }
 
+input[type=submit] {
+  outline: 0;
+}
 
 form label {
 	font-weight: 700;

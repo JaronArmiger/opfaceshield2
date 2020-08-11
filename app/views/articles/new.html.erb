@@ -1,17 +1,22 @@
 <div class="main-wrapper">
-<h1 class="page-title">Add Article Link</h1>
-<%= form_with(model: @article, local: true) do |f| %>
-  <%= render 'shared/error_messages', object: f.object %>
-  <div class="form-group">
-	<%= f.label :url, "Article URL" %>
-  	<%= f.text_field :url, class: "form-control" %>
-  </div>
-  <div class="form-group">
-	<%= f.label :img_src, "Image URL" %>
-  	<%= f.text_field :img_src, class: "form-control" %>
-  </div>
-  <div class="form-group d-flex justify-content-center">
-    <%= f.submit "Add Article" %>
-  </div>
-<% end %>
+  <h1 class="page-title">Add Article Link</h1>
+  <div class="articlePreview">
+    <img src="" id="previewImage">
+    <h2 id="previewTitle"></h2>
+  </div>	
+  <%= form_with(model: @article, local: true) do |f| %>
+    <%= render 'shared/error_messages', object: f.object %>
+    <div class="form-group">
+	  <%= f.label :url, "Article URL" %>
+  	  <%= f.text_field :url, class: "form-control" %>
+    </div>
+    <div class="form-group">
+	  <%= f.label :img_src, "Image URL" %>
+  	  <%= f.text_field :img_src, class: "form-control" %>
+    </div>
+    <div class="form-group d-flex justify-content-center">
+      <%= f.submit "Add Article" %>
+    </div>
+  <% end %>
+
 </div>
