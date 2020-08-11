@@ -13,6 +13,8 @@ class ArticlesController < ApplicationController
   end
 
   def create
+    debug(params)
+=begin
     url = params[:article][:url]
     img_src = params[:article][:img_src]
     html = RestClient.get(url)
@@ -25,6 +27,7 @@ class ArticlesController < ApplicationController
     else
   	  render :new
     end
+=end
   end
 
   def edit

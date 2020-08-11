@@ -1,20 +1,4 @@
-/*function httpGet(theUrl) {
-    if (window.XMLHttpRequest) {
-      // code for IE7+, Firefox, Chrome, Opera, Safari
-      xmlhttp = new XMLHttpRequest();
-    }
-    else {// code for IE6, IE5
-      xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
-    }
-    xmlhttp.onreadystatechange = function() {
-      if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
-        return xmlhttp.responseText;
-      }
-    }
-    xmlhttp.open("GET", theUrl, true );
-    xmlhttp.send();    
-}
-*/
+import noImage from '../images/no_image.png';
 
 const setTitle = (url, element) => {
   const proxyurl = "https://cors-anywhere.herokuapp.com/";
@@ -25,13 +9,21 @@ const setTitle = (url, element) => {
       let title = regex.exec(contents)[0];
       title = title.replace(/<title>/,"");
       title = title.replace(/<\/title>/,"");
-      console.log(title);
-      console.log(element);
       element.text(title);
+
     })
     .catch(function (err) {
-        console.log("Something went wrong!", err);
+      element.text("title not found at given URL");
+      console.log("Something went wrong!", err);
     });
+}
+
+const addHiddenInput = () => {
+  
+}
+
+const addInput = () => {
+  
 }
 
 $(document).on('turbolinks:load', function() {
@@ -41,11 +33,16 @@ $(document).on('turbolinks:load', function() {
   const $previewImage = $('#previewImage');
   const $previewTitle = $('#previewTitle');
 
+  $previewImage.on('error', function(e) {
+    this.src = noImage;
+  	console.log(this);
+  });
+
   $urlInput.on('input', function(e) {
     setTitle(e.target.value, $previewTitle);
   });
+
   $imgInput.on('input', function(e) {
   	$previewImage.attr('src', e.target.value);
-    $previewDiv.slideDown('slow');
   });
 });
