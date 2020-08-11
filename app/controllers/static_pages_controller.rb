@@ -18,7 +18,8 @@ class StaticPagesController < ApplicationController
   end
 
   def news
-    @response = open('https://stackoverflow.com/questions/44678437/no-such-file-or-directory-rb-sysopen-ruby');
-
+    html = RestClient.get 'https://www.mlive.com/news/ann-arbor/2020/04/ann-arbor-pilot-flies-face-shields-to-health-care-workers-around-midwest-to-help-fight-coronavirus.html'
+    parsed_data = Nokogiri::HTML.parse(html)
+    @response = parsed_data.css("img")[0]['src']
   end
 end
