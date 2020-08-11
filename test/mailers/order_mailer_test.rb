@@ -1,7 +1,7 @@
 require 'test_helper'
 
 class OrderMailerTest < ActionMailer::TestCase
-=begin
+
   def setup
   	@user = users(:alfonso)
   	@account = @user.account
@@ -12,7 +12,7 @@ class OrderMailerTest < ActionMailer::TestCase
     mail = OrderMailer.confirmation(@user, @order)
     assert_equal "PPE Order for #{@account.institution_name}", mail.subject
     assert_equal [@user.email], mail.to
-    assert_equal ["from@example.com"], mail.from
+    assert_equal ["admin@operationfaceshieldchicago.com"], mail.from
     assert_match @account.contact_first_name, mail.body.encoded
     assert_match @account.institution_name, mail.body.encoded
   end
@@ -22,10 +22,10 @@ class OrderMailerTest < ActionMailer::TestCase
     mail = OrderMailer.cancellation(@user, @order)
     assert_equal "Cancellation of Order ##{@order.id} for #{@account.institution_name}", mail.subject
     assert_equal [@user.email], mail.to
-    assert_equal ["from@example.com"], mail.from
+    assert_equal ["admin@operationfaceshieldchicago.com"], mail.from
     assert_match @account.contact_first_name, mail.body.encoded
     assert_match @account.institution_name, mail.body.encoded
     assert_match "canceled", mail.body.encoded
   end
-=end
+
 end
