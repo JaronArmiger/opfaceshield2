@@ -1,5 +1,5 @@
 class StaticPagesController < ApplicationController
-  skip_before_action :authenticate_user!, only: [:home, :about]
+  skip_before_action :authenticate_user!, only: [:home, :about, :news]
   def home
   	@posts = Post.order('created_at DESC')
   end
@@ -18,5 +18,7 @@ class StaticPagesController < ApplicationController
   end
 
   def news
+    @response = open('https://stackoverflow.com/questions/44678437/no-such-file-or-directory-rb-sysopen-ruby');
+
   end
 end
