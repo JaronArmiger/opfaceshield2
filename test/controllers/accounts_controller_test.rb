@@ -3,11 +3,11 @@ require 'test_helper'
 class AccountsControllerTest < ActionDispatch::IntegrationTest
   def setup
   	@first_user = users(:alfonso)
-  	#@first_user.confirm
+  	@first_user.confirm
   	@second_user = users(:ozuna)
-  	#@second_user.confirm
+  	@second_user.confirm
   	@admin = users(:admin)
-  	#@admin.confirm
+  	@admin.confirm
   end
 
   test "no routes should be accessible without sign in" do

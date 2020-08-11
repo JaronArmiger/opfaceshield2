@@ -3,13 +3,13 @@ require 'test_helper'
 class PostsControllerTest < ActionDispatch::IntegrationTest
   def setup
   	@first_user = users(:alfonso)
-  	#@first_user.confirm
+  	@first_user.confirm
   	@second_user = users(:ozuna)
-  	#@second_user.confirm
+  	@second_user.confirm
     @third_user = users(:natasha)
-    #@third_user.confirm
+    @third_user.confirm
     @admin = users(:admin)
-    #@admin.confirm
+    @admin.confirm
   end
 
   test "should redirect if trying to access other user's posts" do

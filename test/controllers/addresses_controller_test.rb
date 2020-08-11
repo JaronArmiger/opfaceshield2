@@ -3,9 +3,9 @@ require 'test_helper'
 class AddressesControllerTest < ActionDispatch::IntegrationTest
   def setup
   	@first_user = users(:alfonso)
-  	#@first_user.confirm
+  	@first_user.confirm
   	@second_user = users(:ozuna)
-  	#@second_user.confirm
+  	@second_user.confirm
   end
 
   test "should redirect all routes if no user signed in" do

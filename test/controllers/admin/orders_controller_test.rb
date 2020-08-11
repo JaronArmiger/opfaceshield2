@@ -3,9 +3,9 @@ require 'test_helper'
 class Admin::OrdersControllerTest < ActionDispatch::IntegrationTest
 	def setup
 	  @regular_user = users(:alfonso)
-	  #@regular_user.confirm
+	  @regular_user.confirm
 	  @admin = users(:admin)
-	  #@admin.confirm
+	  @admin.confirm
 	end
 
 	test "no routes available with no user signed in" do

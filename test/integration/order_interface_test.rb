@@ -4,14 +4,14 @@ class OrderInterfaceTest < ActionDispatch::IntegrationTest
   def setup
   	# first user has no account and no addresses
   	@first_user = users(:natasha)
-  	#@first_user.confirm
+  	@first_user.confirm
   	# second user has account but no addresses
   	@second_user = users(:ozuna)
-  	#@second_user.confirm
+  	@second_user.confirm
     @second_user.account.addresses.delete_all
   	# third user has account and address
   	@third_user = users(:alfonso)
-  	#@third_user.confirm
+    @third_user.confirm
 
     ActionMailer::Base.deliveries.clear
   end

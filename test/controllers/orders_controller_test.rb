@@ -3,11 +3,11 @@ require 'test_helper'
 class OrdersControllerTest < ActionDispatch::IntegrationTest
   def setup
   	@first_user = users(:alfonso)
-  	#@first_user.confirm
+  	@first_user.confirm
   	@second_user = users(:ozuna)
-  	#@second_user.confirm
+  	@second_user.confirm
   	@admin = users(:admin)
-  	#@admin.confirm
+  	@admin.confirm
   end
 
   test "no views should be accessible if no user signed in" do
