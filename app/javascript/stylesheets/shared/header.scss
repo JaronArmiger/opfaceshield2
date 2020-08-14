@@ -23,6 +23,10 @@
 	display: none;
 }
 
+.sub-nav {
+  display: none;
+}
+
 .navbar-toggler {
 	border: 0!important;
 	background-color: $secondary-color;
@@ -62,5 +66,17 @@
 
 	.navbar-nav {
 		margin-right: 4rem;
+	}
+
+	.navbar {
+      height: 7rem;
+	}
+
+	.sub-nav {
+	  display: flex;
+	  background-color: $main-color;
+	  position: absolute;
+	  right: 0;
+	  top: 7rem;
 	}
 }
