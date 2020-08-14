@@ -1,8 +1,8 @@
 class PostsController < ApplicationController
 	include PostsHelper
 
-	before_action :my_post?, unless: :admin_user?, except: [:show, :new, :create]
 	before_action :has_account?, unless: :admin_user?, except: [:show]
+	before_action :my_post?, unless: :admin_user?, except: [:show, :new, :create]
 
 
 	def show

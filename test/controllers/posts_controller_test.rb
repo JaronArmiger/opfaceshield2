@@ -56,11 +56,11 @@ class PostsControllerTest < ActionDispatch::IntegrationTest
     assert_nil @third_user.account
     first_post = @first_user.posts.first
     get edit_post_path(first_post)
-    assert_redirected_to root_path
+    assert_redirected_to new_account_path
     patch post_path(first_post)
-    assert_redirected_to root_path
+    assert_redirected_to new_account_path
     delete post_path(first_post)
-    assert_redirected_to root_path
+    assert_redirected_to new_account_path
   end
 
   test "admin should have access to all routes" do
