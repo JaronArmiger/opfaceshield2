@@ -6,7 +6,7 @@
     <%= render 'layouts/header' %>
     <div class="container">
         <div class="dummy"></div>
-        <%= render 'shared/links'%>
+        <%= render 'shared/links' unless (current_user && current_user.admin?) %>
         <% if !flash.empty? %>
           <% flash.each do |msg_type, msg| %>
             <%= content_tag(:div, msg, class: "alert alert-#{msg_type}") %>
