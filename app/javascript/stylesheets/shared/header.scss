@@ -16,8 +16,10 @@
 	//font-weight: 700;
 	color: $main-color;
 	margin: 0 .5rem;
+	font-size: 1.1rem;
 	//font-family: 'Work Sans', sans-serif;
 }
+
 
 .reg-link {
 	display: none;
@@ -74,9 +76,19 @@
 
 	.sub-nav {
 	  display: flex;
+	  flex-direction: column;
 	  background-color: $main-color;
-	  position: absolute;
+	  position: fixed;
 	  right: 0;
 	  top: 7rem;
+	  padding: .7rem;
+	  border-bottom-left-radius: 3rem;
+	  z-index: 100;
+	}
+
+	.sub-nav .nav-link {
+	  color: white;
+	  margin: 0 .5rem;
+	  font-size: 1.1rem;
 	}
 }

@@ -3,7 +3,6 @@
 		<span class="material-icons">
 			local_shipping
 		</span>
-
 	<% end %>
 	<%= link_to new_post_path do %>
 		<span class="material-icons">
@@ -16,9 +15,11 @@
 			library_books
 		</span>
 	<% end %>
-	<%= link_to account_path(current_user_account) do %>
+	<% if current_user_account %>
+	  <%= link_to account_path(current_user_account) do %>
 		<span class="material-icons">
 			account_circle
 		</span>
+	  <% end %>
 	<% end %>
 </div>
