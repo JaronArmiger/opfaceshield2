@@ -1,7 +1,6 @@
 class StaticPagesController < ApplicationController
   skip_before_action :authenticate_user!, only: [:home, :about, :news]
   def home
-  	@posts = Post.order('created_at DESC')
   end
 
   def about
