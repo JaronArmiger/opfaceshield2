@@ -18,6 +18,7 @@ import '../scripts/admin_orders.js'
 import '../scripts/posts_form.js'
 import '../scripts/donate'
 import '../scripts/articles_form'
+import '../scripts/home'
 //import '../scripts/navbar.js'
 
 
