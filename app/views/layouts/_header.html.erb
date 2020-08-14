@@ -1,8 +1,14 @@
 <nav class="navbar navbar-expand-lg navbar-light">
   <a class="navbar-brand" href="<%= root_path %>"><%= image_pack_tag 'media/images/banner3.png' %></a>
+  <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top" id="paypal-donate">
+    <input type="hidden" name="cmd" value="_donations" />
+    <input type="hidden" name="business" value="JuanA@theyardillinois.com" />
+    <input type="hidden" name="currency_code" value="USD" />
+    <input type="submit" id="paypal-submit" value="donate">
+  </form>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="material-icons">
-      more_vert
+      toc
     </span>
   </button>
 

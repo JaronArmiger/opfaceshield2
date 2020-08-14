@@ -12,10 +12,6 @@
 	height: 3rem;
 }
 
-.navbar-toggler {
-	color: $secondary-color!important;
-}
-
 .navbar-nav .nav-item .nav-link {
 	//font-weight: 700;
 	color: $main-color;
@@ -29,7 +25,23 @@
 
 .navbar-toggler {
 	border: 0!important;
+	background-color: $secondary-color;
+	color: white!important;
+	outline: 0!important;
 }
+
+#donate {
+  background-color: #fcba03;
+  padding: .5rem 1rem;
+  margin-right: -2rem;
+  cursor: pointer;
+  color: white;
+  font-weight: 700;
+  font-size: 1.1rem;
+  border-radius: .2rem;
+}
+
+
 
 @include media-breakpoint-up(md) {
 	.navbar-collapse {

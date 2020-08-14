@@ -127,7 +127,7 @@ a {
 }
 
 .dummy {
-	height: 4rem;
+	height: 5rem;
 }
 
 .hide {
@@ -218,7 +218,7 @@ input[type="submit"] {
 .links a {
 	margin-top: .5rem;
 	font-weight: 700;
-	color: $main-color;
+	color: $dark-blue;
 }
 
 .google {
@@ -271,13 +271,8 @@ input[type="submit"] {
 	display: none
 }
 
-#paypal-donate {
-  
-}
 
 #paypal-submit {
-  width: 200px;
-  height: 50px;
   background-color: #fcba03;
   outline: 0;
 }
