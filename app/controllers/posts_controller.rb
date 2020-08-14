@@ -53,9 +53,10 @@ class PostsController < ApplicationController
 	  end
 
 	  def has_account?
-	  	unless current_user_account
-	  	  flash[:alert] = "Finish setting up your account first!"
-	  	  redirect_to root_path
+	  	unless current_user && current_user_account
+	  	  flash[:alert] = "Finish account set up before placing order."
+	  	  store_location
+	  	  redirect_to new_account_path
 	  	end
 	  end
 
