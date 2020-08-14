@@ -3,7 +3,7 @@
   <div class="admin-order-header-wrapper" style="background-color: <%= order.processed? ? "#18a83e" : "rgb(131,208,245)" %>;">
   	  <h2 class="admin-order-header">Order #<%= order.id %></h2>
   </div>
-  <div class="admin-order-info hide">
+  <div class="admin-order-info">
 	<li class="list-group-item order-info-group">
 		<% if order.processed? %>
 		  <div class="order-info">
