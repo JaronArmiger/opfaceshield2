@@ -6,7 +6,7 @@
     <%= render 'layouts/header' %>
     <div class="container">
         <div class="dummy"></div>
-        <%= render 'shared/links' unless current_user && !current_user.admin?%>
+        <%= render 'shared/links'%>
         <% if !flash.empty? %>
           <% flash.each do |msg_type, msg| %>
             <%= content_tag(:div, msg, class: "alert alert-#{msg_type}") %>
@@ -18,7 +18,7 @@
     <% if current_user && current_user.admin? %>
       <%= render 'layouts/admin_icon_bar' %>
     <% else %>
-      <% if current_user && current_user_account %>
+      <% if current_user %>
         <%= render 'layouts/icon_bar' %>
       <% end %>
     <% end %>
