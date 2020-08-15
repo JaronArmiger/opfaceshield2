@@ -32,7 +32,7 @@ class ArticlesController < ApplicationController
     @article = Article.find(params[:id])
     if @article.update(article_params)
       flash[:success] = "Article updated!"
-      redirect_to article_path(@article)
+      redirect_to articles_path
     else
       render :edit
     end

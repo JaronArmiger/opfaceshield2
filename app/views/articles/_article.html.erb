@@ -10,7 +10,7 @@
   	<span class="post-user"><%= @account.institution_name if @account %></span>
   	<p><%# post.content %></p>
   </div>
-  <% if current_user.admin? %>
+  <% if current_user && current_user.admin? %>
     <div class="dropdown">
 	  <button class="post-options" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 	    <span class="material-icons">more_horiz</span>

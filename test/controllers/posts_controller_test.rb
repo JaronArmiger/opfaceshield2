@@ -77,6 +77,7 @@ class PostsControllerTest < ActionDispatch::IntegrationTest
     assert_response :success
     get edit_post_path(first_post)
     assert_response :success
+    
     new_content = "j'ai trouve la reponse"
     patch post_path(first_post), params: { post: { content: new_content } }
     assert_not flash.empty?
