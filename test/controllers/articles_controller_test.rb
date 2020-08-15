@@ -12,7 +12,7 @@ class ArticlesControllerTest < ActionDispatch::IntegrationTest
 
   test "no routes except index should be accessible if no user signed in" do
   	get articles_path
-  	assert_response success
+  	assert_response :success
     assert_template :index
   	get new_article_path
   	assert_redirected_to new_user_session_path
