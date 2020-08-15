@@ -3,6 +3,7 @@ class ArticlesController < ApplicationController
   before_action :is_admin?, except: [:index, :show]
 
   def index
+    @articles = Article.order(created_at: :desc)
   end
 
   def show
@@ -17,7 +18,7 @@ class ArticlesController < ApplicationController
     @article = Article.new(article_params)
     if @article.save
       flash[:success] = "Article added!"
-      redirect_to article_path(@article)
+      redirect_to articles_path
     else
   	  render :new
     end
