@@ -1,4 +1,5 @@
 class ArticlesController < ApplicationController
+  skip_before_action :authenticate_user!, only: [:index]
   before_action :is_admin?, except: [:index, :show]
 
   def index

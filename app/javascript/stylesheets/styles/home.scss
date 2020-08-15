@@ -64,10 +64,18 @@
 
     }
 
+    #hero-header {
+      position: absolute;
+      bottom: 2rem;
+      right: 3vw;
+      font-size: 7vw;
+      font-weight: 700;
+    }
+
     .home-signup-wrapper {
       position: absolute;
       left: 4rem;
-      top: 7.5rem;
+      top: 6.5rem;
       background-color: rgba(255,255,255,0.6);
       //background-color: $main-color;
       padding: 1.5rem;
@@ -86,13 +94,94 @@
 
     #or {
       font-size: 4rem;
+      padding: 0;
+      margin-bottom: -.7rem;
     }
 
     #three-link {
       background-color: $main-color;
       font-size: 1.5rem;
-      width: 400px!important;
+      width: 300px!important;
     }
+
+    #google-btn {
+      width: 250px!important;
+      margin: auto;
+      margin-top: 1rem;
+      margin-bottom: -1rem;
+      font-size: 1.2rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    #google-btn span {
+      text-align: center;
+    }
+
+	.delivered {
+	  background-color: #fff;
+	  width: 100vw;
+	  display: flex;
+	  justify-content: center;
+	}
+
+	.delivered h1 {
+	  margin: 0;
+	  color: $main-color;
+	  font-size: 7vw;
+	  padding: 2rem 0;
+	}
+
+    .assembly-video {
+      background-color:$main-color;
+      width: 100vw;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 2rem 0;
+    }
+    
+	.assembly-video iframe {
+	  margin: 1rem 0;
+	}
+
+    .assembly-video h2 {
+      color: #fff;
+    }
+
+    .assembly-video a:hover {
+      text-decoration: none;
+    }
+
+    #diagram-desktop {
+      max-width: 100vw;
+    }
+
+    .news-home {
+      background-color: $main-color;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100vw;
+      padding: 2rem 0;
+    }
+
+    .news-home h2 {
+      color: #fff;
+    }
+/*
+    .diagram {
+      background-image: url("../images/diagram-desktop.jpg");
+      max-height: 110vh;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      width: 100vw;
+      position: relative;
+    }
+*/
 }
 
 

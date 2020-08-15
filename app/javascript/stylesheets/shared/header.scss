@@ -71,7 +71,7 @@
 	}
 
 	.navbar {
-      height: 7rem;
+      height: 6rem;
 	}
 
 	.sub-nav {
@@ -80,7 +80,7 @@
 	  background-color: $main-color;
 	  position: fixed;
 	  right: 0;
-	  top: 7rem;
+	  top: 6rem;
 	  padding: .7rem;
 	  border-bottom-left-radius: 3rem;
 	  z-index: 100;
@@ -90,5 +90,10 @@
 	  color: white;
 	  margin: 0 .5rem;
 	  font-size: 1.1rem;
+	  transition: color .2s;
+	}
+
+	.sub-nav .nav-link:hover {
+	  color: #DDD;
 	}
 }
