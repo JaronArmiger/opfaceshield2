@@ -3,7 +3,7 @@ class StaticPagesController < ApplicationController
   
   skip_before_action :authenticate_user!, only: [:home, :about]
   def home
-
+    @articles = Article.order(created_at: :desc).limit(3)
   end
 
   def about

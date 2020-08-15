@@ -165,12 +165,33 @@
       flex-direction: column;
       align-items: center;
       width: 100vw;
-      padding: 2rem 0;
+      padding: 1rem 0;
     }
 
     .news-home h2 {
       color: #fff;
+      margin-bottom: 1rem;
     }
+
+    .articles-container {
+      display: flex;
+      justify-content: space-around;
+    }
+
+    .article-home {
+      max-width: 30%;
+    }
+
+    .article-header-home {
+      font-size: 1.5rem;
+      margin-top: 1rem;
+    }
+
+    .article-header-home:hover {
+      color: #DDD;
+    }
+
+
 /*
     .diagram {
       background-image: url("../images/diagram-desktop.jpg");
