@@ -46,7 +46,7 @@ class PostsControllerTest < ActionDispatch::IntegrationTest
   	assert_difference 'Post.count', -1 do
       delete post_path(first_post)
     end
-  	assert_redirected_to root_path
+  	assert_redirected_to posts_path
     assert_not flash.empty?
   end
 
@@ -84,7 +84,7 @@ class PostsControllerTest < ActionDispatch::IntegrationTest
     assert_difference 'Post.count', -1 do
       delete post_path(first_post)
     end
-    assert_redirected_to root_path
+    assert_redirected_to posts_path
     assert_not flash.empty?
 
   end

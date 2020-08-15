@@ -29,21 +29,21 @@ class PostsController < ApplicationController
 	end
 
 	def update
-		@post = Post.find(params[:id])
-		if @post.update(post_params)
-			flash[:success] = "Post updated!"
-			redirect_to post_path(@post)
-		else
-			render :edit
-		end
+	  @post = Post.find(params[:id])
+	  if @post.update(post_params)
+		flash[:success] = "Post updated!"
+		redirect_to post_path(@post)
+	  else
+		render :edit
+	  end
 
 	end
 
 	def destroy
-		@post = Post.find(params[:id])
-		@post.destroy
-		flash[:success] = "Post deleted!"
-		redirect_to root_path
+	  @post = Post.find(params[:id])
+	  @post.destroy
+	  flash[:success] = "Post deleted!"
+	  redirect_to posts_path
 	end
 
 	private
