@@ -4,6 +4,10 @@ class PostsController < ApplicationController
 	before_action :has_account?, unless: :admin_user?, except: [:show]
 	before_action :my_post?, unless: :admin_user?, except: [:show, :new, :create]
 
+    
+    def index
+      @posts = Post.all
+    end
 
 	def show
 		@post = Post.find(params[:id])
