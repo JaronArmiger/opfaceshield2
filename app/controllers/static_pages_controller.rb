@@ -18,4 +18,7 @@ class StaticPagesController < ApplicationController
     flash[:success] = "Thank you for your donation!"
     cookie_redirect
   end
+
+  def files
+  end
 end
