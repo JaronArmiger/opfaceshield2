@@ -9,6 +9,9 @@ class StaticPagesController < ApplicationController
   def about
   end
 
+  def contact
+  end
+
   def paypal_cancel
     flash[:success] = "Your donation has been canceled."
     cookie_redirect

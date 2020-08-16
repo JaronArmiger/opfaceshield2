@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   devise_for :users, controllers: { omniauth_callbacks: 'users/omniauth_callbacks'}
   root 'static_pages#home'
   get '/about', to: 'static_pages#about'
+  get '/contact', to: 'static_pages#contact'
   get '/files', to: 'static_pages#files'
   get '/cancel', to: 'static_pages#paypal_cancel', as: 'paypal_cancel'
   get '/completed', to: 'static_pages#paypal_completed', as: 'paypal_completed'
