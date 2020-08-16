@@ -4,5 +4,7 @@ $(document).on('turbolinks:load', function() {
   if (homeHero) {
     container.style["margin-left"] = 0;
     container.style["margin-right"] = 0;
+    container.style["padding-left"] = 0;
+    container.style["padding-right"] = 0;
   }
 });

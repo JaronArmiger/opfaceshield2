@@ -13,6 +13,7 @@
   </div>
 <% end %>
 <div id="home-hero">
+
   <div class="home-signup-wrapper">
     <p class="home-signup-p">With the supply chain compromised,</p>
     <p class="home-signup-p">we are providing the front line with free PPE.</p>
@@ -51,17 +52,28 @@
       <a href="https://a360.co/3eyk9Zw" id="three-link">Fusion 360</a>
   </div>
   </div>
-  <h1 id="hero-header" class="red">Protect Yourself.</h1>
+  <h1 id="hero-header" class="">Protect Yourself.</h1>
+  <div class="info-home">
+    <p>With the supply chain</p>
+    <p>compromised, we are</p>
+    <p>providing the front line</p>
+    <p>with free PPE.</p>
+  </div>
+  <div class="mobile-buttons">
+    <button class="btn">Start Ordering</button>
+    <button class="btn">Access 3D Print Files</button>
+  </div>
 </div>
 <div class="delivered">
   <h1><span class="red">42,500+</span> Face Shields delivered.</h1>
 </div>
 <div class="assembly-video">
-  <h2>Our face shields are easy to assemble.</h2>
+  <h2>Easy assembly.</h2>
   <iframe width="560" height="315" src="https://www.youtube.com/embed/blvAaNILftw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
   <h2><%= link_to "More assembly videos >>", "#", class: "red" %></a></h2>
 </div>
 <%= image_pack_tag "media/images/diagram-desktop.jpg", id: "diagram-desktop" %>
+<%= image_pack_tag "media/images/diagram-mobile.jpg", id: "diagram-mobile" %>
 <div class="news-home">
   <h2>Operation Face Shield in the News</h2>
   <div class="articles-container">

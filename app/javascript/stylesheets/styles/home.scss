@@ -36,8 +36,129 @@
 	}
 }
 
+.home-signup-wrapper {
+  display: none;
+}
+
+#home-hero {
+  background-image: url("../images/surgeon-mobile.jpg");
+  height: 70vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100vw;
+  margin-top: -1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#hero-header {
+ font-weight: 700;
+ margin-top: 1.2rem;
+ color: $dark-blue;
+ font-size: 12vw;
+}
+
+.mobile-buttons {
+  display: flex;
+  flex-direction: column;
+  align-self: flex-end;
+  margin-bottom: 2rem;
+  margin-right: 1.5rem;
+}
+
+.mobile-buttons button {
+  background-color: $main-color;
+  color: white;
+  font-weight: 500;
+  margin-bottom: 2rem;
+}
+
+.info-home {
+  align-self: flex-end;
+  margin-right: 1.8rem;
+  margin-bottom: 3rem;
+}
+
+.info-home p {
+  margin: 0;
+  font-weight: 500;
+}
+
+.delivered {
+  background-color: #fff;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+}
+
+.delivered h1 {
+  margin: 0;
+  color: $main-color;
+  font-size: 8vw;
+  padding: .7rem 0;
+  text-align: center;
+}
+
+.delivered span {
+  font-weight: 700;
+  display: block;
+}
+
+.assembly-video {
+  padding: .7rem 0;
+  background-color: $main-color;
+}
+
+.assembly-video iframe {
+  max-width: 100%;
+}
+
+.assembly-video h2 {
+  color: #fff;
+  text-align: center;
+}
+
+.assembly-video a:hover {
+  text-decoration: none;
+}
+
+#diagram-desktop {
+  display: none;
+}
+
+#diagram-mobile {
+  display: block;
+  max-width: 100vw;
+  padding-top: 1rem;
+  background-color: #fff;
+}
+
+.news-home {
+  background-color: $main-color;
+}
+
+.news-home h2 {
+  color: #fff;
+  text-align: center;
+  padding: 1rem 0;
+}
+
+.news-home a:hover {
+  text-decoration: none;
+}
+
+.article-home h2 {
+  
+}
 
 @include media-breakpoint-up(md) {
+	.mobile-buttons {
+	  display: none;
+	}
+
 	.print-col {
 		//position: relative;
 	}
@@ -70,10 +191,12 @@
       right: 3vw;
       font-size: 7vw;
       font-weight: 700;
+      display: none;
     }
 
     .home-signup-wrapper {
       position: absolute;
+      display: block;
       left: 4rem;
       top: 6.5rem;
       background-color: rgba(255,255,255,0.6);
@@ -119,18 +242,14 @@
       text-align: center;
     }
 
-	.delivered {
-	  background-color: #fff;
-	  width: 100vw;
-	  display: flex;
-	  justify-content: center;
-	}
-
 	.delivered h1 {
 	  margin: 0;
-	  color: $main-color;
 	  font-size: 7vw;
 	  padding: 2rem 0;
+	}
+
+	.delivered span {
+	  display: inline;
 	}
 
     .assembly-video {
@@ -140,27 +259,24 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      padding: 2rem 0;
+      padding: 1.2rem 0;
     }
     
 	.assembly-video iframe {
 	  margin: 1rem 0;
 	}
 
-    .assembly-video h2 {
-      color: #fff;
-    }
-
-    .assembly-video a:hover {
-      text-decoration: none;
-    }
 
     #diagram-desktop {
+      display: block;
       max-width: 100vw;
     }
 
+    #diagram-mobile {
+      display: none;
+    }
+
     .news-home {
-      background-color: $main-color;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -169,7 +285,6 @@
     }
 
     .news-home h2 {
-      color: #fff;
       margin-bottom: 1rem;
     }
 
