@@ -155,7 +155,11 @@
 }
 
 @include media-breakpoint-up(md) {
-	.mobile-buttons {
+	.info-home {
+    display: none;
+  }
+
+  .mobile-buttons {
 	  display: none;
 	}
 
