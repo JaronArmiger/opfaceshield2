@@ -5,43 +5,43 @@ admin_user = User.new(email: "admin@operationfaceshieldchicago.com",
 			    admin: true)
 admin_user.confirm
 admin_user.save!
-
-#user_two = User.new(email: "armiger2@uic.edu",
+=begin
+user_two = User.new(email: "armiger2@uic.edu",
 					password: "password",
 					password_confirmation: "password")
-#user_two.confirm
-#user_two.save
+user_two.confirm
+user_two.save
 
-#user_three = User.new(email: "jointpainjames@gmail.com",
+user_three = User.new(email: "jointpainjames@gmail.com",
 					password: "password",
 					password_confirmation: "password")
-#user_three.confirm
-#user_three.save
+user_three.confirm
+user_three.save
 
-#no_account_user = User.new(email: "no_account@chasseur.fr",
+no_account_user = User.new(email: "no_account@chasseur.fr",
 						   password: "password",
 						   password_confirmation: "password")
-#no_account_user.confirm
-#no_account_user.save
+no_account_user.confirm
+no_account_user.save
 
 # accounts
 
-#account_two = Account.new(institution_name: "Pirouette Hospital",
+account_two = Account.new(institution_name: "Pirouette Hospital",
 						  institution_type: "Medical",
 						  contact_first_name: "Olivier",
 						  contact_last_name: "Rousteing",
 						  phone_number: 2214548899,
 						  user_id: user_two.id)
-#account_two.save
+account_two.save
 
-#account_three = Account.new(institution_name: "Pierrot Medical",
+account_three = Account.new(institution_name: "Pierrot Medical",
 						  institution_type: "Medical",
 						  contact_first_name: "Pierrot",
 						  contact_last_name: "Dumbledore",
 						  phone_number: 1114321111,
 						  user_id: user_three.id)
-#account_three.save
-
+account_three.save
+=end
 # addresses
 =begin
 street_address_two = "5 W Anderson Ln"
