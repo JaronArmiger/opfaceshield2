@@ -18,34 +18,10 @@
     <p class="home-signup-p">With the supply chain compromised,</p>
     <p class="home-signup-p">we are providing the front line with free PPE.</p>
     <% if !current_user %>
-      <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { class: "devise-form", id: "home-signup-form" }) do |f| %>
-        <%= render "devise/shared/error_messages", resource: resource %>
-
-        <div class="field">
-        <%= f.label :email %><br />
-        <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
-        </div>
-
-        <div class="field">
-          <%= f.label :password %>
-          <% if @minimum_password_length %>
-          <em>(<%= @minimum_password_length %> characters minimum)</em>
-          <% end %><br />
-          <%= f.password_field :password, autocomplete: "new-password" %>
-        </div>
-
-        <div class="field">
-          <%= f.label :password_confirmation %><br />
-          <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
-        </div>
-
-        <div class="actions">
-          <%= f.submit "Sign up" %>
-        </div>
-      <% end %>
-      <%= link_to omniauth_authorize_path(resource_name, :google_oauth2), class: "btn google", id: "google-btn" do %>
-        <span class="google"><%= render 'shared/google_logo' %> Continue With Google</span>
-      <% end %>
+      <div class="print-links flex-row mb-0 mt-4">
+        <%= link_to 'Sign Up', new_user_registration_path, class: 'btn' %>
+        <%= link_to 'Log in', new_user_registration_path, class: 'btn' %>
+      </div>
       <p class="home-signup-p" id="or">or</p>
     <% else %>
       <br>
@@ -64,8 +40,8 @@
     <p>with free PPE.</p>
   </div>
   <div class="mobile-buttons">
-    <button class="btn">Start Ordering</button>
-    <button class="btn">Access 3D Print Files</button>
+    <%= link_to 'Start Ordering', new_user_registration_path, class: 'btn' %>
+    <%= link_to "Access 3D Print Files", files_path, class: 'btn' %>
   </div>
 </div>
 <div class="delivered">
