@@ -1,49 +1,49 @@
 # users
-admin_user = User.new(email: "jaron.armiger@gmail.com",
+admin_user = User.new(email: "admin@operationfaceshieldchicago.com",
 			    password: "password",
 			    password_confirmation: "password",
 			    admin: true)
 admin_user.confirm
 admin_user.save!
 
-user_two = User.new(email: "armiger2@uic.edu",
+#user_two = User.new(email: "armiger2@uic.edu",
 					password: "password",
 					password_confirmation: "password")
-user_two.confirm
-user_two.save
+#user_two.confirm
+#user_two.save
 
-user_three = User.new(email: "jointpainjames@gmail.com",
+#user_three = User.new(email: "jointpainjames@gmail.com",
 					password: "password",
 					password_confirmation: "password")
-user_three.confirm
-user_three.save
+#user_three.confirm
+#user_three.save
 
-no_account_user = User.new(email: "no_account@chasseur.fr",
+#no_account_user = User.new(email: "no_account@chasseur.fr",
 						   password: "password",
 						   password_confirmation: "password")
-no_account_user.confirm
-no_account_user.save
+#no_account_user.confirm
+#no_account_user.save
 
 # accounts
 
-account_two = Account.new(institution_name: "Pirouette Hospital",
+#account_two = Account.new(institution_name: "Pirouette Hospital",
 						  institution_type: "Medical",
 						  contact_first_name: "Olivier",
 						  contact_last_name: "Rousteing",
 						  phone_number: 2214548899,
 						  user_id: user_two.id)
-account_two.save
+#account_two.save
 
-account_three = Account.new(institution_name: "Pierrot Medical",
+#account_three = Account.new(institution_name: "Pierrot Medical",
 						  institution_type: "Medical",
 						  contact_first_name: "Pierrot",
 						  contact_last_name: "Dumbledore",
 						  phone_number: 1114321111,
 						  user_id: user_three.id)
-account_three.save
+#account_three.save
 
 # addresses
-
+=begin
 street_address_two = "5 W Anderson Ln"
 city_two = "Djeraak"
 state_two = "Hisendower"
@@ -67,9 +67,9 @@ address_three = Address.new(street_address: street_address_three,
 						    zipcode: zipcode_three,
 						    account_id: account_three.id)
 address_three.save
-
+=end
 # orders
-
+=begin
 10.times do
 	order = Order.new(num_shields: 121,
 				  	  num_adjusters: 232,
@@ -93,7 +93,7 @@ end
 				  	  account_id: account_three.id)
 	order.save
 end
-
+=end
 # articles
 
 Article.create(url: "https://www.mlive.com/news/ann-arbor/2020/04/ann-arbor-pilot-flies-face-shields-to-health-care-workers-around-midwest-to-help-fight-coronavirus.html",
