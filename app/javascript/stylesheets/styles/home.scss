@@ -199,29 +199,40 @@
     }
 
     #hero-header {
-      position: absolute;
-      bottom: 2rem;
-      right: 3vw;
-      font-size: 7vw;
+      //position: absolute;
+      //top: 7rem;
+      //left: 3vw;
+      font-size: 8vw;
       font-weight: 700;
       //display: none;
     }
 
     .home-signup-wrapper {
       position: absolute;
-      display: block;
+      display: flex;
+      flex-direction: column;
       left: 4rem;
-      top: 6.5rem;
-      background-color: rgba(255,255,255,0.6);
+      top: 5rem;
+      
       //background-color: $main-color;
       padding: 1.5rem;
-      border-radius: 3rem;
+      //border-radius: 3rem;
     }
+
+    .home-btn-wrapper {
+      background-color: rgba(255,255,255,0.4);
+      align-self: start;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 2rem;
+    }
+
 
     .home-signup-p {
 	  font-size: 1.4rem;
 	  margin-bottom: 0;
-	  text-align: center;
+	  //text-align: center;
     }
 
     #home-signup-form {

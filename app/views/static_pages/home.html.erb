@@ -15,24 +15,27 @@
 <div id="home-hero">
 
   <div class="home-signup-wrapper">
-    <p class="home-signup-p">With the supply chain compromised,</p>
-    <p class="home-signup-p">we are providing the front line with free PPE.</p>
-    <% if !current_user %>
-      <div class="print-links flex-row mb-0 mt-4">
-        <%= link_to 'Sign Up', new_user_registration_path, class: 'btn' %>
-        <%= link_to 'Log in', new_user_registration_path, class: 'btn' %>
+    <h1 id="hero-header" class="">Protect Yourself.</h1>
+    <div class="home-btn-wrapper">
+      <p class="home-signup-p align-self-start">With the supply chain compromised,</p>
+      <p class="home-signup-p align-self-start">we are providing the front line with free PPE.</p>
+      <% if !current_user %>
+        <div class="print-links flex-column mb-0 mt-4">
+          <%= link_to 'Sign Up', new_user_registration_path, id: 'three-link' %>
+          <%= link_to 'Log in', new_user_session_path, id: 'three-link' %>
+        </div>
+        <p class="home-signup-p" id="or">or</p>
+      <% else %>
+        <br>
+      <% end %>
+      <p class="home-signup-p mt-3">3D Print your own visors and ear savers.</p>
+      <div class="print-links flex-column mt-4">
+        <a href="https://drive.google.com/drive/u/0/folders/1UCLFYgbQiWUnyqVzcoiSLw6p3AYBssBd?fbclid=IwAR2iZaF-rFFMh1eW1Gh59qQdGJbPIivO_Wc3-XHEX4Aa5qzhYVqfCVVBikY" id="three-link" >STL Model 2.1</a>
+        <a href="https://a360.co/3eyk9Zw" id="three-link">Fusion 360</a>
       </div>
-      <p class="home-signup-p" id="or">or</p>
-    <% else %>
-      <br>
-    <% end %>
-    <p class="home-signup-p mt-3">3D Print your own visors and ear savers.</p>
-    <div class="print-links flex-column mt-4">
-      <a href="https://drive.google.com/drive/u/0/folders/1UCLFYgbQiWUnyqVzcoiSLw6p3AYBssBd?fbclid=IwAR2iZaF-rFFMh1eW1Gh59qQdGJbPIivO_Wc3-XHEX4Aa5qzhYVqfCVVBikY" id="three-link" >STL Model 2.1</a>
-      <a href="https://a360.co/3eyk9Zw" id="three-link">Fusion 360</a>
+    </div>
   </div>
-  </div>
-  <h1 id="hero-header" class="">Protect Yourself.</h1>
+  
   <div class="info-home">
     <p>With the supply chain</p>
     <p>compromised, we are</p>
